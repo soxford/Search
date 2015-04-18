@@ -7,7 +7,7 @@ import java.util.Set;
  * @author Simon Campbell <simonhmcampbell@gmail.com>
  *
  */
-public class IterativeDeepeningTreeSearch extends Search {
+public class IterativeDeepeningTreeSearch implements Search {
 	protected final DepthFirstFrontier frontier = new DepthFirstFrontier();
 	private int lastSearchNodeCount = -1;
 

@@ -3,12 +3,12 @@ package search;
 import java.util.Set;
 
 /**
- * The Search abstract class encapsulates the notion of a search algorithm which seeks a solution for reaching a State that satisfies a Goal Test 
+ * The Search interface encapsulates the notion of a search algorithm which seeks a solution for reaching a State that satisfies a Goal Test 
  * by starting from a root State and pursuing actions to reach new states until a goal State is found or until no further new States can be reached.
  * The algorithm can also instantiate methods which find all solutions satisfying given constraints
  * @author Simon Campbell <simonhmcampbell@gmail.com>
  */
-public abstract class Search {
+public interface Search {
 	/**
 	 * A method that, given a root State and a goal test, returns a node containing a solution or null if no solution can be found.
 	 * @param root - the initial starting state for the search
@@ -35,7 +35,7 @@ public abstract class Search {
 	public abstract int getLastSearchNodeCount();
 	
 	/**
-	 * An optional method that, given a root State, a goal test, and a constraint on any solution path, returns the set of possible solutions satisfying the constraint
+	 * (Optional) An optional method that, given a root State, a goal test, and a constraint on any solution path, returns the set of possible solutions satisfying the constraint
 	 * @param root - the initial starting state for the search
 	 * @param goalTest - the goal test which determines whether any given state is a goal state
 	 * @param pathConstraint - a constraint of the solution path's that can be returned

@@ -9,7 +9,7 @@ import java.util.Set;
  * The Frontier stores and supplies nodes for exploration
  * @author Simon Campbell <simonhmcampbell@gmail.com>
  */
-public abstract class FrontierSearch extends Search {
+public abstract class FrontierSearch implements Search {
 	protected final Frontier frontier;
 	protected int lastSearchNodeCount = -1; //flag value for no searches run
 
