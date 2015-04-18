@@ -6,7 +6,6 @@ import java.util.Set;
  * The Search interface encapsulates the notion of a search algorithm which seeks a solution for reaching a State that satisfies a Goal Test 
  * by starting from a root State and pursuing actions to reach new states until a goal State is found or until no further new States can be reached.
  * The algorithm can also instantiate methods which find all solutions satisfying given constraints
- * @author Simon Campbell <simonhmcampbell@gmail.com>
  */
 public interface Search {
 	/**
