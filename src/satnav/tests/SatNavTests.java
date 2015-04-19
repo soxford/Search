@@ -89,7 +89,7 @@ public class SatNavTests {
 		int maxJunctionCountOnRoute = 3;
 		int expectedCount = 2;
 		
-		assertEquals(expectedCount, navigator.getRouteCountWithJunctionCountUpperLimit(originName, destinationName, maxJunctionCountOnRoute));
+		assertEquals(expectedCount, navigator.getRouteCountWithJunctionCountAtMostUpperLimit(originName, destinationName, maxJunctionCountOnRoute));
 	}
 	
 	/*	7. The number of routes starting at A and ending at C with exactly 4 junctions.
@@ -136,6 +136,6 @@ public class SatNavTests {
 		int maxRouteLength = 30;
 		int expectedCount = 9;
 		
-		assertEquals(expectedCount, navigator.getRouteCountWithRouteLengthUpperLimit(originName, destinationName, maxRouteLength));
+		assertEquals(expectedCount, navigator.getRouteCountWithRouteLengthLessThanUpperLimit(originName, destinationName, maxRouteLength));
 	}
 }

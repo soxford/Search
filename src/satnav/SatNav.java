@@ -130,7 +130,7 @@ public class SatNav {
 	 * @return The number of routes meeting the criteria
 	 * @throws IllegalArgumentException if the origin or destination junctions are not found in the map and if the maxJunctionCountOnRoute is non-positive
 	 */
-	public int getRouteCountWithJunctionCountUpperLimit(String originName, String destinationName,
+	public int getRouteCountWithJunctionCountAtMostUpperLimit(String originName, String destinationName,
 			int maxJunctionCountOnRoute) {
 		//validate the input
 		if (originName == null || destinationName == null || maxJunctionCountOnRoute < 0){
@@ -162,11 +162,11 @@ public class SatNav {
 	 * This method gets the number of routes available from the origin to the destination which cover less than the provided maximum route length
 	 * @param originName - the origin point for any counted route
 	 * @param destinationName - the destination point for any counted route	
-	 * @param routeLengthUpperBound - the maximum length of any counted route
+	 * @param routeLengthUpperBound - the (exclusive) upper bound on any counted route
 	 * @return The number of routes meeting the criteria
 	 * @throws IllegalArgumentException if the origin or destination junctions are not found in the map and if the maxRouteLength is non-positive
 	 */
-	public int getRouteCountWithRouteLengthUpperLimit(String originName,
+	public int getRouteCountWithRouteLengthLessThanUpperLimit(String originName,
 			String destinationName, int routeLengthUpperBound) {
 		//validate the input
 		if (originName == null || destinationName == null || routeLengthUpperBound <= 0){
