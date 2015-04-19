@@ -2,7 +2,7 @@ package search;
 
 /**
  * The Action interface encapsulates the concept of an action taken from a particular State. Each Action has a cost which is assumed to be non-negative.
- * @author Simon Campbell <simonhmcampbell@gmail.com>
+ * @author Simon Campbell <simonhmcampbell@gmail.com> with credit to Professor Peter Jeavons, Oxford
  */
 public interface Action {
 	//returns the cost of an action which is assumed to be non-negative
